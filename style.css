@@ -5,17 +5,16 @@ html {
 * {
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    color: #454545;
 }
 
 body {
     background-color: bisque;
     padding: 0 25px;
+
+    background-color: rgb(128, 135, 135);
+    background-color: rgb(255, 255, 255);;
 }
-
-
-
-
-
 
 .content-wrapper {
     display: grid;
@@ -30,28 +29,55 @@ body {
     grid-auto-flow: dense;
 }
 
-
-
 .section {
     grid-column: 2;
 
-    padding: 20px;
+    padding: 30px;
 }
 
 .userpic-section,
 .skills-section,
-.education-section,
 .language-section,
-.contacts-section {
+.contacts-section,
+.projects-section {
     grid-column: 1;
 }
 
+/*#region general-------------------- GENERAL RUSES --------------------*/
+.underline {
+    width: 65px;
+    height: 4px;
+    background-color: #454545;
+    margin-bottom: 25px;
+}
+
+.section-header {
+    font-size: 34px;
+    letter-spacing: 2px;
+    line-height: 29px;
+    color: #353535;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+html ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+main li {
+    margin: 10px 0;
+}
 
 
-
+/*#endregion*/
+/*#region userpic-------------------- USER PIC --------------------*/
 .userpic {
     /*background-image: url(/сссс.PNG);*/
-    background-image: url(/userpic2.jpg);
+    background-image: url(userpic2.jpg);
 
     width: 100%;
     height: 100%;
@@ -61,9 +87,8 @@ body {
     background-position: center;
 }
 
-
 .userpic-section {
-    background-color: aqua;
+    /*background-color: aqua;*/
 
     border-radius: 0 20px 0 20px;
 
@@ -71,77 +96,57 @@ body {
 
     overflow: hidden;
 }
+/*#endregion*/
 
 .skills-section {
     background-color: brown;
 
     border-radius: 20px 0 20px 0;
+
+    background-color: #f8dcbf;
 }
+.skills-section ul {
+
+    list-style: square;
+    padding-left: 20px;
+}
+
 
 .education-section {
     background-color: blueviolet;
 
     border-radius: 20px 0 0 0;
+
+    background-color: #f7d8d5;
 }
+.education-section ul {
+    list-style: square;
+    padding-left: 20px;
+}
+
+
+
 
 .contacts-section {
     background-color: red;
 
     border-radius: 0 20px 0 20px;
+
+    background-color: #f1e7dd;
 }
 
 .language-section {
     background-color: coral;
 
     border-radius: 0 20px 0 0;
+
+    background-color: #f7d8d5;
 }
 
-
-
-
-
+/*#region about-me-------------------- ABOUT ME --------------------*/
 .aboutme-section {
     /*background-color: blue;*/
-
-
-}
-
-.code-section {
-    background-color: green;
-
-    border-radius: 0 20px 0 20px;
-
-    grid-row: 2 / 4;
-}
-
-.projects-section {
-    background-color: yellow;
-
-    border-radius: 20px 0 20px 0;
-}
-
-.work-section {
-    background-color: rgb(23, 88, 58);
-
-    border-radius: 0 20px 0 20px;
-}
-
-
-
-
-
-
-
-
-
-
-.section-header {
-    font-size: 34px;
-    letter-spacing: 2px;
-    line-height: 29px;
-    /*color: #454545;*/
-    font-weight: 600;
-    font-family: "Poppins";
+    color: inherit;
 }
 
 .name-container h1 {
@@ -149,6 +154,8 @@ body {
     letter-spacing: 4px;
     line-height: 43px;
     font-weight: 700;
+    margin: 0;
+    color: #252525;
 }
 
 .name-container p {
@@ -156,4 +163,88 @@ body {
     letter-spacing: 2px;
     line-height: 25px;
     font-weight: 400;
+
+    margin-top: 20px;
+    margin-bottom: 90px;
+}
+
+.aboutme-section > p {
+
+    font-size: 21px;
+    line-height: 33px;
+    color: #454545;
+    font-weight: 400;
+
+}
+/*#endregion*/
+
+.code-section {
+    background-color: green;
+
+    border-radius: 0 20px 0 20px;
+
+    grid-row: 2 / 4;
+
+    overflow-x: auto;
+
+    background-color: #f1e7dd;
+}
+
+.projects-section {
+    background-color: yellow;
+
+    border-radius: 20px 0 20px 0;
+
+    background-color: #f8dcbf;
+}
+
+.work-section {
+    background-color: rgb(23, 88, 58);
+
+    border-radius: 0 20px 0 20px;
+
+    background-color: #c4b8b7;
+}
+
+
+
+
+
+
+
+
+
+
+.footer-wrapper,
+.header-wrapper {
+    min-height: 80px;
+    max-width: 1480px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    background-color: #f8dcbf;
+    border-radius: 20px 20px 0 0;
+    margin-top: 20px;
+    padding: 0 30px;
+
+
+}
+
+.header-wrapper {
+    margin: 0 auto 20px auto;
+    border-radius: 0 0 20px 20px;
+    justify-content: end;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+
+}
+
+nav ul li {
+    padding: 0 15px;
 }
