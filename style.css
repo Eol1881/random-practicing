@@ -238,6 +238,24 @@ nav * {
 nav a {
     color: inherit;
 }
+
+.footer-github {
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.footer-github::before {
+    left: 10px;
+    content: "";
+    background-image: url(assets/github-mark-white.svg);
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    background-size: contain;
+    margin-right: 7px;
+    background-repeat: no-repeat;
+}
 /*#endregion*/
 /*#region media---------------------- MEDIA ----------------------------*/
 @media (max-width: 1255px) {
@@ -267,8 +285,12 @@ nav a {
     }
 
     .aboutme-section {
-        grid-row: 0;
+        grid-row: 2;
     }
+    .userpic-section {
+        grid-row: 1;
+    }
+
     .contacts-section {
         grid-row: 9;
     }
@@ -380,22 +402,16 @@ nav a {
     .userpic-section {
         padding: 0;
     }
+
+    .footer-wrapper {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 15px;
+    }
+
+    .footer-date {
+        order: 3;
+        margin: 10px;
+    }
 }
 /*#endregion*/
-
-.footer-github {
-    text-align: center;
-    display: flex;
-    align-items: center;
-}
-
-.footer-github::before {
-    left: 10px;
-    content: "";
-    background-image: url(assets/github-mark-white.svg);
-    width: 25px;
-    height: 25px;
-    display: inline-block;
-    background-size: contain;
-    margin-right: 7px
-}
