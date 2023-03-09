@@ -13,6 +13,19 @@ body {
     padding: 0 25px;
 }
 
+a {
+    transition: all 300ms ease;
+    display: inline-block;
+}
+
+a:hover {
+    transform: scale(1.5);
+    transform: rotate(10deg);
+    transform: scale(1.1) rotate(2deg);
+    color: #b92626;
+}
+
+/*#region general-------------------- GENERAL RUSES --------------------*/
 .content-wrapper {
     max-width: 1480px;
     margin: 0 auto;
@@ -37,7 +50,6 @@ body {
     grid-column: 1;
 }
 
-/*#region general-------------------- GENERAL RUSES --------------------*/
 .underline {
     margin-bottom: 25px;
     width: 65px;
@@ -220,7 +232,7 @@ nav * {
 
 .nav-item:hover {
     transform: scale(1.2);
-    color: rgb(185, 38, 38);
+    color: #b92626;
 }
 
 nav a {
@@ -371,4 +383,19 @@ nav a {
 }
 /*#endregion*/
 
+.footer-github {
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
 
+.footer-github::before {
+    left: 10px;
+    content: "";
+    background-image: url(assets/github-mark-white.svg);
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    background-size: contain;
+    margin-right: 7px
+}
